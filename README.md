@@ -24,6 +24,8 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   [Optional installation instructions](#optional-installation-instructions)
 
+-   [Code tours](#code-tours)
+
 ## Installing E-Bikes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
@@ -36,7 +38,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
 
     ```
-    sfdx force:auth:web:login -d -a myhuborg
+    sfdx auth:web:login -d -a myhuborg
     ```
 
 1. Clone the repository:
@@ -76,12 +78,6 @@ E-Bikes is a sample application that demonstrates how to build applications with
     sfdx force:data:tree:import -p ./data/sample-data-plan.json
     ```
 
-1. Deploy Community metadata:
-
-    ```
-    sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
-    ```
-
 1. Publish the Community:
 
     ```
@@ -115,10 +111,8 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 1. Authorize your Trailhead Playground or Developer org and provide it with an alias (**mydevorg** in the command below):
 
     ```
-    sfdx force:auth:web:login -s -a mydevorg
+    sfdx auth:web:login -s -a mydevorg
     ```
-
-1. If you are setting up a Developer Edition: go to **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
 
 1. Enable Communities with the following steps:
 
@@ -172,12 +166,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
         sfdx force:data:tree:import -p ./data/sample-data-plan.json
         ```
 
-    1. Deploy the Community metadata.
-
-        ```
-        sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
-        ```
-
     1. Publish the Community.
 
         ```
@@ -222,3 +210,7 @@ Prettier and ESLint will now run automatically every time you commit changes. Th
 npm run lint:lwc
 npm run prettier
 ```
+
+## Code Tours
+
+Code Tours are guided walkthroughs that will help you understand the app code better. To be able to run them, install the [CodeTour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour).
